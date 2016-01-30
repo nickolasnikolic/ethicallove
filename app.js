@@ -9,18 +9,34 @@ app.set('view engine', 'handlebars');
 
 var mongoose = require('mongoose');
 
-var db = mongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/test' );
+mongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/test' );
+
+var postSchema = mongoose.Schema({
+    title: String,
+    body: String
+});
+
+var post = mongoose.model('post', postSchema);
 
 app.get('/', function(req, res){
-    res.render('home',{ 'post': [{'title': "we didn't start the fire", 'body': "it's been always burning since the world's been turning..."},{'title': "we didn't start the fire", 'body': "it's been always burning since the world's been turning..."}] });
+
+    post.find(function(err, kittens){
+        res.render('home', kittens );
+    });
+
 });
 
 app.get('/admin', function(req,res){
-
+    res.render('admin');
 });
 
-app.post('/admin', function(req, res){
+app.use(bp.text());
 
+app.post('/admin', function(req, res){
+    var p = new post({ title: req.body.title, body: req.body.body });
+    p.save(function(){
+        res.redirect('/');
+    });
 });
 
 app.listen(process.env.PORT || 3000);
