@@ -20,9 +20,9 @@ var post = mongoose.model('post', postSchema);
 
 app.get('/', function(req, res){
 
-    post.find(function(err, kittens){
-        console.log(kittens);
-        res.render('home', kittens );
+    post.find(function( err, posts ){
+        console.log( posts );
+        res.render('home', posts );
     });
 
 });
