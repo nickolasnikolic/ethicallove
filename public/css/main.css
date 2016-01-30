@@ -1,0 +1,10 @@
+/*import fonts*/
+@import "fonts/carrig_text/stylesheet.css";
+@import "fonts/carrig_textitalic/stylesheet.css";
+@import "fonts/carrig_bold/stylesheet.css";
+@import "fonts/carrig_display/stylesheet.css";
+@import "fonts/carrig_displayitalic/stylesheet.css";
+
+body{
+    font-family: 'carrigtext';
+}

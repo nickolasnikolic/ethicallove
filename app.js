@@ -18,6 +18,8 @@ var postSchema = mongoose.Schema({
 
 var post = mongoose.model('post', postSchema);
 
+app.use(express.static('public'));
+
 app.get('/', function(req, res){
 
     post.find(function( err, posts ){
