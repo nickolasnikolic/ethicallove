@@ -6,9 +6,9 @@ var app = express();
 app.engine('handlebars', hbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
-var db = mongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/test' );
+//var db = mongoose.connect( process.env.MONGOLAB_URI || 'mongodb://localhost/test' );
 
 app.get('/', function(req, res){
     res.render('home');
