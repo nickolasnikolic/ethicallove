@@ -20,3 +20,7 @@ em, footer small{
 strong{
     font-family: 'carrig_textbold';
 }
+
+input, text, button{
+    font-family: 'carrigtext';
+}
