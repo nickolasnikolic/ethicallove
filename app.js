@@ -33,10 +33,13 @@ app.get('/admin', function(req,res){
 app.use(bp.text());
 
 app.post('/admin', function(req, res){
+    console.log(req.body);
+    /*
     var p = new post({ title: req.body.title, body: req.body.body });
     p.save(function(){
         res.redirect('/');
     });
+    */
 });
 
 app.listen(process.env.PORT || 3000);
