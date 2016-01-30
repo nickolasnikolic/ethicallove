@@ -30,8 +30,6 @@ app.get('/admin', function(req,res){
     res.render('admin');
 });
 
-app.use(bp.text());
-
 app.post('/admin', function(req, res){
     console.log(req.body);
     /*
