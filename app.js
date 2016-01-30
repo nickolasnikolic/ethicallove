@@ -11,12 +11,5 @@ app.get('/', function(req, res){
     res.send('goodbye handlebars.');
 });
 
-app.get('/admin', function(req,res){
-
-});
-
-app.post('/admin', function(req, res){
-
-});
 
 app.listen(3000);
