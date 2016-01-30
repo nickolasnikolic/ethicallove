@@ -21,8 +21,7 @@ var post = mongoose.model('post', postSchema);
 app.get('/', function(req, res){
 
     post.find(function( err, posts ){
-        console.log( posts );
-        res.render('home', posts );
+        res.render('home', { post: posts } );
     });
 
 });
