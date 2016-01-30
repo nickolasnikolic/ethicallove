@@ -1,0 +1,28 @@
+{
+  "name": "ethicallove",
+  "version": "1.0.0",
+  "description": "blog app based only on mongo and express",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickolasnikolic/ethicallove.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "nickolas nikolic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickolasnikolic/ethicallove/issues"
+  },
+  "homepage": "https://github.com/nickolasnikolic/ethicallove#readme"
+}
