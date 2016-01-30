@@ -7,7 +7,6 @@
 
 body{
     font-family: 'carrigtext';
-    padding: 4em auto;
 }
 
 h1,h2,h3,h4,h6{
@@ -16,4 +15,8 @@ h1,h2,h3,h4,h6{
 
 em, footer small{
     font-family: 'carrigtext_italic';
+}
+
+strong{
+    font-family: 'carrig_textbold';
 }
